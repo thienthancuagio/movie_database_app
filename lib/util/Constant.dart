@@ -5,7 +5,12 @@ class Constant {
 
 class ImageURL {
   static const BASE_URL = "https://image.tmdb.org/t/p/w500";
+  static const BASE_YOUTUBE = "https://img.youtube.com/vi/";
   static String getImageUrl(String path) {
     return BASE_URL + path;
+  }
+
+  static String getImageFromYoutube(String key) {
+  return BASE_YOUTUBE + key + "/0.jpg";
   }
 }

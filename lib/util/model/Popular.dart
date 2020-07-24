@@ -23,5 +23,6 @@ class MoveObject {
       page: json["page"] ?? 0,
       total_results: json["total_results"] ?? 0,
       total_page: json["total_page"] ?? 0,
+//      total_page: json["total_page1"] ? json["total_page"] : 0 ,
       resulst: Product.parserProductList(json));
 }

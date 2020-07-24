@@ -21,4 +21,31 @@ class RequestService {
           'query': keyword
         });
   }
+
+  Future<Response> getMoveDetail(int id) {
+    return NetworkClient.instance.dio.get(
+        ApiConstant.DETAIL_API + "/" + id.toString() +"",
+        queryParameters: {'api_key': Constant.API_KEY});
+  }
+
+  Future<Response> getTrainers(int id) {
+    print("get trailer");
+    return NetworkClient.instance.dio.get(
+        ApiConstant.GET_LIST_TRAINER + "/" + id.toString() +"/videos",
+        queryParameters: {'api_key': Constant.API_KEY});
+  }
+
+  Future<Response> getReviews(int id, int  page) {
+    print("get review =" + id.toString());
+    return NetworkClient.instance.dio.get(
+        ApiConstant.DETAIL_REVIEWS + "/" + id.toString() +"/reviews",
+        queryParameters: {'api_key': Constant.API_KEY, "page": page},);
+  }
+
+  Future<Response> getListTopRate(int page) {
+    return NetworkClient.instance.dio.get(
+      ApiConstant.TOP_RATE,
+      queryParameters: {'page': page, 'api_key': Constant.API_KEY},
+    );
+  }
 }

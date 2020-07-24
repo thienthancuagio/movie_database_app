@@ -17,7 +17,7 @@ class NetworkClient {
 //      if (token != null) {
 //      myOption.headers["Authorization"] = "Bearer " + token;
 //      }
-      print("log request =" + myOption.toString());
+//      print("log request =" + myOption.extra);
 
       return myOption;
     }, onResponse: (Response response) async {

@@ -24,6 +24,10 @@ class TabNavigationItem {
         TabNavigationItem(
             page: TopRateScreen(),
             title: Text("Rate"),
-            assets: AppImage.IC_RATE),
-      ];
+            assets: AppImage.IC_RATE)
+//      ,TabNavigationItem(
+//          page: TopRateScreen(),
+//          title: Text("Rate"),
+//          assets: AppImage.IC_RATE)
+        ];
 }
